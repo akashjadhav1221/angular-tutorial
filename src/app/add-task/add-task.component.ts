@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Task } from '../models/task.model';
 
 @Component({
   selector: 'app-add-task',
@@ -7,9 +8,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class AddTaskComponent implements OnInit {
 
-  task = '';
+  task: Task = new Task('', false);
 
-  @Output() onTaskAdd: EventEmitter<string> = new EventEmitter();
+  @Output() onTaskAdd: EventEmitter<Task> = new EventEmitter();
 
   constructor() { }
 
@@ -19,7 +20,11 @@ export class AddTaskComponent implements OnInit {
   addTask(){
     this.onTaskAdd.emit(this.task);
     console.log('Event Emitted');
-    this.task = '';
+    this.clearTask();
+  }
+
+  clearTask(){
+    this.task = new Task('', false);
   }
 
 }

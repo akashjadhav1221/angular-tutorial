@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Task } from './models/task.model';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tutorial';
-  task = '';
+  task: Task;
 
-  add(task: string){
+  add(task: Task){
     console.log('Recieved', task);
     this.task = task;
   }
