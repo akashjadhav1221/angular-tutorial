@@ -1,1 +1,25 @@
-<p>add-task works!</p>
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+    <ngb-panel title="Task Manager">
+        <ng-template ngbPanelContent>
+
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Task" aria-label="task"
+                    aria-describedby="basic-addon1" [(ngModel)]="task">
+            </div>
+
+            <div class="container" style="text-align: center;">
+
+                <button type="button" class="btn btn-primary" 
+                data-toggle="button" aria-pressed="false" style="margin: 5px;"
+                (click)="addTask()">
+                    Add Task
+                </button>
+                <button type="button" class="btn btn-danger" style="margin: 5px;"
+                data-toggle="button" aria-pressed="false">
+                    Clear
+                </button>
+            </div>
+
+        </ng-template>
+    </ngb-panel>
+</ngb-accordion>

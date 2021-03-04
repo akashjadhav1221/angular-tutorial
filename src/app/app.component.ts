@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tutorial';
+  task = '';
+
+  add(task: string){
+    console.log('Recieved', task);
+    this.task = task;
+  }
 }
