@@ -4,20 +4,15 @@
 
             <div class="mb-3">
                 <input type="text" class="form-control" placeholder="Task" aria-label="task"
-                    aria-describedby="basic-addon1" [(ngModel)]="task">
+                    aria-describedby="basic-addon1" [(ngModel)]="task.title">
             </div>
 
             <div class="container" style="text-align: center;">
 
-                <button type="button" class="btn btn-primary" 
-                data-toggle="button" aria-pressed="false" style="margin: 5px;"
-                (click)="addTask()">
-                    Add Task
-                </button>
-                <button type="button" class="btn btn-danger" style="margin: 5px;"
-                data-toggle="button" aria-pressed="false">
-                    Clear
-                </button>
+                <button type="button" class="btn btn-primary" (click)="addTask()" style="margin: 5px;">Add Task</button>
+
+                <button type="button" class="btn btn-warning" (click)="clearTask()" style="margin: 5px;">Clear</button>
+
             </div>
 
         </ng-template>

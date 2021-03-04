@@ -1,5 +1,6 @@
 <ul class="list-group" *ngIf="taskList && taskList.length > 0">
-    <li class="list-group-item" *ngFor="let task of taskList; let i = index;">{{i + 1}}. {{task}}</li>
+    <ng-container *ngFor="let datum of taskList; let i = index;">
+        <app-task [task]="datum" (onRemoveTask)="removeTask($event)"></app-task>
+    </ng-container>
 </ul>
 
-<app-task></app-task>
