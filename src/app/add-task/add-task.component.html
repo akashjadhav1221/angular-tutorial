@@ -3,8 +3,11 @@
         <ng-template ngbPanelContent>
 
             <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Task" aria-label="task"
-                    aria-describedby="basic-addon1" [(ngModel)]="task.title">
+                <!-- <input type="text" class="form-control" placeholder="Task" aria-label="task"
+                    aria-describedby="basic-addon1" [(ngModel)]="task.title"> -->
+
+                    <input type="text" class="form-control" placeholder="Task" aria-label="task"
+                    aria-describedby="basic-addon1" #taskTitle>
             </div>
 
             <div class="container" style="text-align: center;">
