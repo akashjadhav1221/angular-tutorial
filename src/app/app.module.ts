@@ -8,13 +8,17 @@ import { AddTaskComponent } from './add-task/add-task.component';
 import { ListTaskComponent } from './list-task/list-task.component';
 import { TaskComponent } from './list-task/task/task.component';
 import { FormsModule } from '@angular/forms';
+import { Highlight } from './directives/highlight.directive';
+import { BetterHighlight } from './directives/better-highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddTaskComponent,
     ListTaskComponent,
-    TaskComponent
+    TaskComponent,
+    Highlight,
+    BetterHighlight
   ],
   imports: [
     BrowserModule,
