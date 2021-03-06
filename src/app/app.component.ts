@@ -10,6 +10,12 @@ export class AppComponent {
   title = 'tutorial';
   task: Task;
 
+  constructor(){
+    console.log('To check CI/CD pipeline.');
+  }
+
+  
+
   add(task: Task){
     console.log('Recieved', task);
     this.task = task;
