@@ -10,6 +10,9 @@ import { TaskComponent } from './list-task/task/task.component';
 import { FormsModule } from '@angular/forms';
 import { Highlight } from './directives/highlight.directive';
 import { BetterHighlight } from './directives/better-highlight.directive';
+import { RouterModule } from '@angular/router';
+import { UserService } from './services/user.service';
+import { CommonService } from './services/common.service';
 
 @NgModule({
   declarations: [
@@ -21,12 +24,13 @@ import { BetterHighlight } from './directives/better-highlight.directive';
     BetterHighlight
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    RouterModule,
+    BrowserModule,
     NgbModule,
     FormsModule
   ],
-  providers: [],
+  providers: [UserService, CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
